@@ -1,5 +1,4 @@
 @media only screen and (max-width: 600px) {
-    
 *{
     padding: 0;
     margin: 0;
@@ -19,6 +18,9 @@ body{
     transform: translate(-50%, -50%);
     animation: 2.5s fill ease forwards 3s ; 
 }
+
+
+
 /* #logo mask{
      animation: fill 0.5 ease forwards 2s; 
 }  */
@@ -92,6 +94,25 @@ body{
         fill: white;
     }
 }
+
+@keyframes ShowAndHide {
+    from {
+        opacity: 0;
+    }
+    35%{
+        opacity: 0;
+        top: 80%;
+    }
+    85%{
+        opacity: 1;
+        top: 60%;
+    }
+    to { 
+        opacity: 0; 
+        top: 70%;
+    }
+}
+
   }
 
   *{
@@ -110,10 +131,22 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    position: fixed;
     transform: translate(-50%, -50%);
-    animation: 2.5s fill ease forwards 3s, 2.5s move ease forwards 4s ;  
+    animation: 2.5s fill ease-in-out forwards 3s, 2.5s move ease-in-out forwards 4s, 2.5s show ease-in-out forwards 3s  ;  
 
 }
+
+#welcome{
+    color: azure;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 2.0s;
+    animation: ShowAndHide ease-in-out forwards 8s;  
+}
+
 /* #logo mask{
      animation: fill 0.5 ease forwards 50s; 
 } */
@@ -194,8 +227,31 @@ body{
 
 @keyframes move{
     to{
-        top: 3%;
+        top: 3.8%;
         width: 20%;
         height: 20%;
+    }
+}
+@keyframes dark{
+    to{
+        background-color:midnightblue;
+    }
+}
+
+@keyframes ShowAndHide {
+    from {
+        opacity: 0;
+    }
+    35%{
+        opacity: 0;
+        top: 70%;
+    }
+    75%{
+        opacity: 1;
+        top: 50%;
+    }
+    to { 
+        opacity: 0; 
+        top: 70%;
     }
 }

@@ -111,11 +111,15 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: 2.5s fill ease forwards 3s; 
+    animation: 2.5s fill ease forwards 3s, 2.5s move ease forwards 4s ;  
 
 }
 /* #logo mask{
      animation: fill 0.5 ease forwards 50s; 
+} */
+
+/* .#thelogo{
+    animation: 2.5s move ease forwards 4s; 
 } */
 
 #logo path:nth-child(2){
@@ -185,5 +189,13 @@ body{
     }
     to{
         fill: white;
+    }
+}
+
+@keyframes move{
+    to{
+        top: 3%;
+        width: 20%;
+        height: 20%;
     }
 }
